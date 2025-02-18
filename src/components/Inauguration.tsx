@@ -16,7 +16,6 @@ export function ShineBorderDemo() {
                     autoPlay
                     loop
                     muted
-                    controls
                 >
                     <source src={"curtain_reveal.mp4"} type="video/mp4" />
                     Your browser does not support the video tag.
@@ -37,7 +36,7 @@ export function ShineBorderDemo() {
                                 className="w-3 h-3 mt-4 mb-2 md:w-5 md:h-5 bg-red-500 rounded-full animate-emit delay-150"
                             />
                         ))}
-                                        <div style={{ width: 500, height: 100 }}></div>
+                                        <div style={{ width: 500, height: 500 }}></div>
 
                     </div>
                 </div>
