@@ -6,9 +6,10 @@ import { MagicCard } from "../magicui/magic-card";
 
 interface TextProps {
     text: string;
+    className?: string;
 }
 
-export function MagicCardDemo ({ text } : TextProps) {
+export function MagicCardDemo ({ text } : TextProps, ) {
     const { theme } = useTheme();
     return (
         <div

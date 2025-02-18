@@ -22,6 +22,7 @@ export function ShineBorderDemo() {
                 </video>
             </ShineBorder>
 
+            <div className="flex ">
             <div className="flex flex-col mt-5 md:mt-10">
                 <div className="flex flex-col md:flex-row mt-5 md:mt-10 w-full justify-center gap-4 md:gap-48">
                     <MagicCardDemo text="Pavilion 1" />
@@ -29,7 +30,8 @@ export function ShineBorderDemo() {
                 </div>
 
                 <div className=" md:mt-14 mx-auto max-w-screen-xl overflow-hidden px-4">
-                    <div className="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-20 justify-center">
+                    <div className="text-3xl text-white font-bold mb-10"><center>Stalls</center></div>
+                    <div className="grid ml-10 grid-cols-4 md:grid-cols-8 gap-4 md:gap-20 justify-center">
                         {[...Array(16)].map((_, i) => (
                             <span 
                                 key={i}
@@ -40,6 +42,15 @@ export function ShineBorderDemo() {
 
                     </div>
                 </div>
+            </div>
+
+            
+            <div className="mt-20 ml-2">
+                <div className="flex flex-col-reverse">
+                <MagicCardDemo text="Buyer Zone" />
+                <MagicCardDemo text="Join Discussion" />
+                </div>
+            </div>
             </div>
 
             <style jsx global>{`
