@@ -4,12 +4,16 @@ import { useTheme } from "next-themes";
 
 import { MagicCard } from "../magicui/magic-card";
 
-export function MagicCardDemo() {
+interface TextProps {
+    text: string;
+}
+
+export function MagicCardDemo ({ text } : TextProps) {
     const { theme } = useTheme();
     return (
         <div
             className={
-                "flex h-[500px] w-[40vw] mt-4 flex-col gap-4 lg:h-[250px] lg:flex-row"
+                "flex h-[100px] w-[20vw] mt-4 flex-col gap-4 lg:h-[150px] lg:flex-row"
             }
         >
             <MagicCard
@@ -17,7 +21,7 @@ export function MagicCardDemo() {
                 gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
                 
             >
-                Pavilion
+                { text }
             </MagicCard>
         </div>
     );
