@@ -29,12 +29,12 @@ export function ShineBorderDemo() {
                     <MagicCardDemo text="Pavilion 2" />
                 </div>
 
-                <div className="mt-8 md:mt-14 mx-auto max-w-screen-xl overflow-hidden px-4">
+                <div className=" md:mt-14 mx-auto max-w-screen-xl overflow-hidden px-4">
                     <div className="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-20 justify-center">
                         {[...Array(16)].map((_, i) => (
                             <span 
                                 key={i}
-                                className="w-3 h-3 md:w-5 md:h-5 bg-red-500 rounded-full animate-emit delay-150"
+                                className="w-3 h-3 mt-4 mb-2 md:w-5 md:h-5 bg-red-500 rounded-full animate-emit delay-150"
                             />
                         ))}
                     </div>
