@@ -2,19 +2,17 @@
 import { ShineBorder } from "./shine-border";
 import { MagicCardDemo } from "./shop";
 
-
 export function ShineBorderDemo() {
     return (
-        <div className="p-5">
+        <div className="p-2 md:p-5">
             <ShineBorder
-                className="relative w-full h-96 rounded-full mt-2 bg-slate-800 text-white flex items-center justify-center overflow-hidden"
+                className="relative w-full h-48 md:h-96 rounded-lg md:rounded-full mt-2 bg-slate-800 text-white flex items-center justify-center overflow-hidden"
                 color={["#cc0000", "#1a0000", "#FFBE7B"]}
-                borderWidth={15}
-                borderRadius={200}
+                borderWidth={8}
+                borderRadius={20}
             >
-                {/* Video inside ShineBorder */}
                 <video
-                    className="w-full h-full object-cover rounded-full pointer-events-none"
+                    className="w-full h-full object-cover rounded-lg md:rounded-full pointer-events-none"
                     autoPlay
                     loop
                     muted
@@ -25,67 +23,24 @@ export function ShineBorderDemo() {
                 </video>
             </ShineBorder>
 
-            <div className="flex flex-col mt-10">
-            <div className="flex mt-10 w-full justify-center">
-                <div>
+            <div className="flex flex-col mt-5 md:mt-10">
+                <div className="flex flex-col md:flex-row mt-5 md:mt-10 w-full justify-center gap-4 md:gap-48">
                     <MagicCardDemo text="Pavilion 1" />
-                </div>
-                <div className="ml-48">
                     <MagicCardDemo text="Pavilion 2" />
                 </div>
-               
+
+                <div className="mt-8 md:mt-14 mx-auto max-w-screen-xl overflow-hidden px-4">
+                    <div className="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-20 justify-center">
+                        {[...Array(16)].map((_, i) => (
+                            <span 
+                                key={i}
+                                className="w-3 h-3 md:w-5 md:h-5 bg-red-500 rounded-full animate-emit delay-150"
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
 
-            <div className="flex mt-14 ml-56">
-                <span className="w-5 h-5 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <div style={{ width: 500, height: 100 }}></div>
-            </div>
-            <div className="flex  ml-56">
-                <span className="w-5 h-5 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <div style={{ width: 'full', height: 100 }}></div>
-
-            </div>
-            <div className="flex  ml-56">
-                <span className="w-5 h-5 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <div style={{ width: 500, height: 100 }}></div>
-
-            </div>
-            <div className="flex  ml-56">
-                <span className="w-5 h-5 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <span className="w-5 h-5 ml-20 bg-red-500 rounded-full animate-emit delay-150"></span>
-                <div style={{ width: 500, height: 100 }}></div>
-
-            </div>
-
-
-</div>
             <style jsx global>{`
                 @keyframes emit {
                     0% {
